@@ -1,10 +1,10 @@
 {
   "name": "task-tracker-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple task tracker CLI application",
   "main": "index.js",
   "bin": {
-    "task-cli": "./src/index.js"
+    "task": "./src/index.js"
   },
   "repository": {
     "type": "git",

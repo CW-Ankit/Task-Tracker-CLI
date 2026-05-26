@@ -1,9 +1,9 @@
-# Task Tracker CLI 📋
+# Task Tracker CLI
 
 A professional, lightweight command-line interface (CLI) application built with Node.js to help you track your daily tasks. This project demonstrates clean software architecture, ES Modules, and persistent data storage using JSON.
 Project Idea from Roadmap.sh [task tracker](https://roadmap.sh/projects/task-tracker).
 
-## ◈ Getting Started
+## Getting Started
 
 ### Installation
 
@@ -28,7 +28,7 @@ npm install -g @notankit/task-tracker-cli
 
 ---
 
-## ◈ Detailed Command Reference
+## Detailed Command Reference
 
 ### 1. Adding Tasks
 Create a new task to your to-do list. Every new task starts with the status `todo`.
@@ -89,7 +89,7 @@ Remove a task from your list permanently.
 
 ---
 
-## ⚙ Technical Architecture
+## Technical Architecture
 
 This project follows the **Separation of Concerns** principle, splitting the app into three distinct layers:
 
@@ -111,7 +111,7 @@ The "Persistence." It handles:
 - JSON serialization and deserialization.
 - Ensuring the data file is created if it doesn't exist.
 
-## ⊞ Task Data Structure
+## Task Data Structure
 
 Each task is stored as an object in `tasks.json` with the following properties:
 
@@ -123,5 +123,5 @@ Each task is stored as an object in `tasks.json` with the following properties:
 | `createdAt` | ISO Date | When the task was first created. |
 | `updatedAt` | ISO Date | When the task was last modified. |
 
-## ⚖ License
+## License
 ISC

@@ -7,6 +7,13 @@ Project Idea from Roadmap.sh [task tracker](https://roadmap.sh/projects/task-tra
 
 ### Installation
 
+**Quick Install (Recommended)**:
+Install globally via npm to use the `task` command anywhere on your system:
+```bash
+npm install -g @notankit/task-tracker-cli
+```
+
+**Install from Source**:
 1. **Clone the repository**:
    ```bash
    git clone <repository-url>

@@ -1,0 +1,21 @@
+{
+  "name": "task-tracker-cli",
+  "version": "0.0.3",
+  "description": "A simple task tracker CLI application",
+  "main": "index.js",
+  "bin": {
+    "task-cli": "./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CW-Ankit/Task-Tracker-CLI.git"
+  },
+  "keywords": [],
+  "author": "CW-Ankit",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/CW-Ankit/Task-Tracker-CLI/issues"
+  },
+  "homepage": "https://github.com/CW-Ankit/Task-Tracker-CLI#readme"
+}

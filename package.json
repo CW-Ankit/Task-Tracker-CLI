@@ -1,5 +1,5 @@
 {
-  "name": "@notankit/task-tracker-cli",
+  "name": "@CW-ankit/task-tracker-cli",
   "version": "0.0.4",
   "description": "A simple task tracker CLI application",
   "main": "src/index.js",

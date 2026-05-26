@@ -4,7 +4,7 @@
   "description": "A simple task tracker CLI application",
   "main": "src/index.js",
   "bin": {
-    "task": "./src/index.js"
+    "task": "src/index.js"
   },
   "repository": {
     "type": "git",

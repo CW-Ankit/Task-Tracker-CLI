@@ -22,8 +22,8 @@ import * as taskManager from './taskManager.js';
 const args = process.argv.slice(2);
 
 /**
- * The 'command' is the first word provided after 'task-cli'.
- * Example: task-cli add "Buy Milk" -> command is 'add'.
+ * The 'command' is the first word provided after 'task'.
+ * Example: task add "Buy Milk" -> command is 'add'.
  */
 const command = args[0];
 
@@ -35,12 +35,12 @@ switch (command) {
   case 'add':
     /**
      * Use Case: User wants to add a new task.
-     * Expected Input: task-cli add "Description"
+     * Expected Input: task add "Description"
      */
     const description = args[1];
     if (!description) {
       console.log('Error: Please provide a task description.');
-      console.log('Usage: task-cli add "Task description"');
+      console.log('Usage: task add "Task description"');
     } else {
       const task = taskManager.addTask(description);
       console.log(`Task added successfully (ID: ${task.id})`);
@@ -50,7 +50,7 @@ switch (command) {
   case 'list':
     /**
      * Use Case: User wants to see their tasks.
-     * Expected Input: task-cli list [filter]
+     * Expected Input: task list [filter]
      * If no filter is provided, we default to 'all'.
      */
     const filter = args[1] || 'all';
@@ -70,13 +70,13 @@ switch (command) {
   case 'update':
     /**
      * Use Case: User wants to edit a task's text.
-     * Expected Input: task-cli update <id> "New description"
+     * Expected Input: task update <id> "New description"
      */
     const updateId = args[1];
     const newDesc = args[2];
     if (!updateId || !newDesc) {
       console.log('Error: Please provide both task ID and new description.');
-      console.log('Usage: task-cli update <id> "New description"');
+      console.log('Usage: task update <id> "New description"');
     } else {
       const updatedTask = taskManager.updateTask(updateId, newDesc);
       if (updatedTask) {
@@ -90,12 +90,12 @@ switch (command) {
   case 'delete':
     /**
      * Use Case: User wants to remove a task.
-     * Expected Input: task-cli delete <id>
+     * Expected Input: task delete <id>
      */
     const deleteId = args[1];
     if (!deleteId) {
       console.log('Error: Please provide a task ID to delete.');
-      console.log('Usage: task-cli delete <id>');
+      console.log('Usage: task delete <id>');
     } else {
       const success = taskManager.deleteTask(deleteId);
       if (success) {
@@ -109,12 +109,12 @@ switch (command) {
   case 'mark-in-progress':
     /**
      * Use Case: User starts working on a task.
-     * Expected Input: task-cli mark-in-progress <id>
+     * Expected Input: task mark-in-progress <id>
      */
     const progressId = args[1];
     if (!progressId) {
       console.log('Error: Please provide a task ID.');
-      console.log('Usage: task-cli mark-in-progress <id>');
+      console.log('Usage: task mark-in-progress <id>');
     } else {
       const taskInProgress = taskManager.updateTaskStatus(progressId, 'in-progress');
       if (taskInProgress) {
@@ -128,12 +128,12 @@ switch (command) {
   case 'mark-done':
     /**
      * Use Case: User completes a task.
-     * Expected Input: task-cli mark-done <id>
+     * Expected Input: task mark-done <id>
      */
     const doneId = args[1];
     if (!doneId) {
       console.log('Error: Please provide a task ID.');
-      console.log('Usage: task-cli mark-done <id>');
+      console.log('Usage: task mark-done <id>');
     } else {
       const taskDone = taskManager.updateTaskStatus(doneId, 'done');
       if (taskDone) {
@@ -149,7 +149,7 @@ switch (command) {
      * Fallback: If the user types a command that doesn't exist, 
      * or provides no command at all, we show the help manual.
      */
-    console.log('Usage: task-cli <command> [arguments]');
+    console.log('Usage: task <command> [arguments]');
     console.log('Commands:');
     console.log('  add "description"       - Add a new task');
     console.log('  list [filter]           - List tasks (filters: all, todo, in-progress, done)');

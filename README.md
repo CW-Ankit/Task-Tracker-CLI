@@ -14,7 +14,7 @@ Project Idea from Roadmap.sh [task tracker](https://roadmap.sh/projects/task-tra
    ```
 
 2. **Link the command globally**:
-   This step allows you to run `task-cli` from any folder in your terminal.
+   This step allows you to run `task` from any folder in your terminal.
    ```bash
    npm link
    ```
@@ -27,10 +27,10 @@ Project Idea from Roadmap.sh [task tracker](https://roadmap.sh/projects/task-tra
 Create a new task to your to-do list. Every new task starts with the status `todo`.
 
 - **Command**: `add`
-- **Usage**: `task-cli add "Your task description"`
+- **Usage**: `task add "Your task description"`
 - **Example**: 
   ```bash
-  task-cli add "Finish the Node.js project documentation"
+  task add "Finish the Node.js project documentation"
   ```
 - **Behavior**: Generates a unique ID and adds `createdAt` and `updatedAt` timestamps.
 
@@ -38,7 +38,7 @@ Create a new task to your to-do list. Every new task starts with the status `tod
 View your tasks. You can see everything or filter by a specific state.
 
 - **Command**: `list`
-- **Usage**: `task-cli list [filter]`
+- **Usage**: `task list [filter]`
 - **Filters**: 
   - `all` (default): Shows every task.
   - `todo`: Shows tasks not yet started.
@@ -46,17 +46,17 @@ View your tasks. You can see everything or filter by a specific state.
   - `done`: Shows completed tasks.
 - **Example**:
   ```bash
-  task-cli list in-progress
+  task list in-progress
   ```
 
 ### 3. Updating Tasks
 Modify the description of a task if your requirements change.
 
 - **Command**: `update`
-- **Usage**: `task-cli update <id> "New description"`
+- **Usage**: `task update <id> "New description"`
 - **Example**:
   ```bash
-  task-cli update 1 "Finish the Node.js project documentation and add examples"
+  task update 1 "Finish the Node.js project documentation and add examples"
   ```
 - **Behavior**: Updates the text and refreshes the `updatedAt` timestamp.
 
@@ -65,20 +65,20 @@ Move tasks through your workflow lifecycle.
 
 #### Mark as In-Progress
 - **Command**: `mark-in-progress`
-- **Usage**: `task-cli mark-in-progress <id>`
-- **Example**: `task-cli mark-in-progress 1`
+- **Usage**: `task mark-in-progress <id>`
+- **Example**: `task mark-in-progress 1`
 
 #### Mark as Done
 - **Command**: `mark-done`
-- **Usage**: `task-cli mark-done <id>`
-- **Example**: `task-cli mark-done 1`
+- **Usage**: `task mark-done <id>`
+- **Example**: `task mark-done 1`
 
 ### 5. Deleting Tasks
 Remove a task from your list permanently.
 
 - **Command**: `delete`
-- **Usage**: `task-cli delete <id>`
-- **Example**: `task-cli delete 1`
+- **Usage**: `task delete <id>`
+- **Example**: `task delete 1`
 
 ---
 

@@ -1,8 +1,8 @@
 {
-  "name": "task-tracker-cli",
+  "name": "@notankit/task-tracker-cli",
   "version": "0.0.4",
   "description": "A simple task tracker CLI application",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
     "task": "./src/index.js"
   },

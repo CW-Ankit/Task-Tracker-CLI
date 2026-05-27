@@ -1,6 +1,6 @@
 {
-  "name": "@CW-ankit/task-tracker-cli",
-  "version": "0.0.4",
+  "name": "@cw-ankit/task-tracker-cli",
+  "version": "0.0.5",
   "description": "A simple task tracker CLI application",
   "main": "src/index.js",
   "bin": {
